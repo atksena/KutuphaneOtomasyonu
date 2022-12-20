@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KutuphaneOtoDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GorevliBilgi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AD" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="SOYAD" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="TC" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="NUMARA" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MAİL" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="gorevliSifre" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UyeBilgi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AD" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="SOYAD" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="TC" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="NUMARA" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MAİL" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="SİFRE" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="KutuphaneOtoDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GorevliBilgi" EntityType="Self.GorevliBilgi" />
+    <EntitySet Name="UyeBilgi" EntityType="Self.UyeBilgi" />
+    <EntitySet Name="Kitaplar" EntityType="KutuphaneOtoDBModel.Kitaplar" />
+  </EntityContainer>
+  <EntityType Name="Kitaplar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ISBN" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+    <Property Name="AD" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="YAZAR" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="YAYINEVİ" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="BASIM_TARİHİ" Type="DateTime" Precision="3" />
+    <Property Name="SAYFA_SAYISI" Type="Int32" />
+  </EntityType>
+</Schema>

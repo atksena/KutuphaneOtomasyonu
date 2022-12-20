@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KutuphaneOtoDBModelStoreContainer" CdmEntityContainer="KutuphaneOtoDBEntities1">
+    <EntitySetMapping Name="GorevliBilgi">
+      <EntityTypeMapping TypeName="KutuphaneOtoDBModel.GorevliBilgi">
+        <MappingFragment StoreEntitySet="GorevliBilgi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="NUMARA" ColumnName="NUMARA" />
+          <ScalarProperty Name="MAİL" ColumnName="MAİL" />
+          <ScalarProperty Name="gorevliSifre" ColumnName="gorevliSifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UyeBilgi">
+      <EntityTypeMapping TypeName="KutuphaneOtoDBModel.UyeBilgi">
+        <MappingFragment StoreEntitySet="UyeBilgi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="NUMARA" ColumnName="NUMARA" />
+          <ScalarProperty Name="MAİL" ColumnName="MAİL" />
+          <ScalarProperty Name="SİFRE" ColumnName="SİFRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kitaplar">
+      <EntityTypeMapping TypeName="KutuphaneOtoDBModel.Kitaplar">
+        <MappingFragment StoreEntitySet="Kitaplar">
+          <ScalarProperty Name="SAYFA_SAYISI" ColumnName="SAYFA SAYISI" />
+          <ScalarProperty Name="BASIM_TARİHİ" ColumnName="BASIM TARİHİ" />
+          <ScalarProperty Name="YAYINEVİ" ColumnName="YAYINEVİ" />
+          <ScalarProperty Name="YAZAR" ColumnName="YAZAR" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

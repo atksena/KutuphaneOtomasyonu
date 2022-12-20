@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KutuphaneOtoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GorevliBilgi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD" Type="nchar" MaxLength="50" />
+    <Property Name="SOYAD" Type="nchar" MaxLength="50" />
+    <Property Name="TC" Type="nchar" MaxLength="11" />
+    <Property Name="NUMARA" Type="nchar" MaxLength="10" />
+    <Property Name="MAİL" Type="nchar" MaxLength="50" />
+    <Property Name="gorevliSifre" Type="nchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Kitaplar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ISBN" Type="nchar" MaxLength="13" />
+    <Property Name="AD" Type="nchar" MaxLength="100" />
+    <Property Name="YAZAR" Type="nchar" MaxLength="100" />
+    <Property Name="YAYINEVİ" Type="nchar" MaxLength="100" />
+    <Property Name="BASIM TARİHİ" Type="datetime" />
+    <Property Name="SAYFA SAYISI" Type="int" />
+  </EntityType>
+  <EntityType Name="UyeBilgi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD" Type="nchar" MaxLength="50" />
+    <Property Name="SOYAD" Type="nchar" MaxLength="50" />
+    <Property Name="TC" Type="nchar" MaxLength="11" />
+    <Property Name="NUMARA" Type="nchar" MaxLength="10" />
+    <Property Name="MAİL" Type="nchar" MaxLength="30" />
+    <Property Name="SİFRE" Type="nchar" MaxLength="15" />
+  </EntityType>
+  <EntityContainer Name="KutuphaneOtoDBModelStoreContainer">
+    <EntitySet Name="GorevliBilgi" EntityType="Self.GorevliBilgi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kitaplar" EntityType="Self.Kitaplar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UyeBilgi" EntityType="Self.UyeBilgi" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
